@@ -147,7 +147,9 @@ async def message_handler(event):
     except Exception as e:
         print(e)
         await txt.delete()
-        result = await event.reply("Some error occurred while searching for movie")
+        result = await event.reply("Click Here For Results 👇")
+              newbutton = [Button.url('click here',
+                                      f'http://ipopcornmovies.rf.gd/search?q={event.text.replace("", "20%")}]
         await asyncio.sleep(Config.AUTO_DELETE_TIME)
         await event.delete() 
         return await result.delete()
